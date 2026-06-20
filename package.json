@@ -1,0 +1,21 @@
+{
+  "name": "gesture-flora-drawing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "python": "conda run -n base python",
+    "check:conda": "conda run -n base python --version"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "^0.10.22",
+    "p5": "^1.11.10",
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}

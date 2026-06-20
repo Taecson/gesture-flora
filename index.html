@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>交互生长</title>
+  </head>
+  <body>
+    <main id="app" aria-label="gesture flora drawing canvas"></main>
+
+    <nav id="material-menu-fallback" aria-label="materials"></nav>
+
+    <div id="status-panel" aria-live="polite">
+      <span id="status-dot"></span>
+      <span id="status-text">初始化中...</span>
+    </div>
+
+    <div id="debug-panel" aria-live="polite"></div>
+
+    <div id="toolbar" aria-label="drawing controls">
+      <button id="clear-canvas" type="button">清空</button>
+      <button id="undo-stroke" type="button">撤销</button>
+      <button id="save-png" type="button">保存</button>
+      <button id="toggle-fullscreen" type="button" aria-pressed="false">全屏</button>
+      <button id="toggle-three" type="button" aria-pressed="false">3D</button>
+      <button id="toggle-debug" type="button" aria-pressed="false">Debug</button>
+      <button id="toggle-mirror" type="button" aria-pressed="true">镜像</button>
+      <button id="toggle-mouse" type="button" aria-pressed="false">鼠标测试</button>
+    </div>
+
+    <div id="error-panel" hidden></div>
+    <video id="camera-feed" playsinline muted></video>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
