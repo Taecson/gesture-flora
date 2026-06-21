@@ -7,6 +7,8 @@ export const MATERIALS = [
   { id: "butterfly", label: "蝴蝶" }
 ];
 
+const publicAssetPath = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
 export const APP_VERSION = "mvp-three-showcase-20260620-2315";
 
 export const CONFIG = {
@@ -91,8 +93,8 @@ export const CONFIG = {
   },
 
   mediapipe: {
-    wasmPath: "/vendor/mediapipe/wasm",
-    modelAssetPath: "/vendor/mediapipe/models/hand_landmarker.task",
+    wasmPath: publicAssetPath("vendor/mediapipe/wasm"),
+    modelAssetPath: publicAssetPath("vendor/mediapipe/models/hand_landmarker.task"),
     delegate: "CPU",
     minHandDetectionConfidence: 0.35,
     minHandPresenceConfidence: 0.35,
